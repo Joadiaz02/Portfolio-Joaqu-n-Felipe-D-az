@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+@import 'tailwindcss';
+
+:root {
+  color-scheme: dark;
+  --color-bg: #0b0d12;
+  --color-surface: #11141b;
+  --color-surface-raised: #161a23;
+  --color-text: #f1f1ed;
+  --color-muted: #969ba8;
+  --color-line: #252a34;
+  --color-accent: #c8f169;
+  --color-accent-strong: #a9d846;
+  --font-body: 'DM Sans', sans-serif;
+  --font-display: 'Manrope', sans-serif;
+  --font-mono: 'DM Mono', monospace;
+  --space-section: clamp(5rem, 10vw, 9rem);
+  --radius-card: 14px;
+  --shadow-card: 0 24px 64px rgb(0 0 0 / 18%);
+  --transition-ui: 180ms ease;
+}
