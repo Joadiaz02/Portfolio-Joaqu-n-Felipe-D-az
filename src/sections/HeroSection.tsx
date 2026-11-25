@@ -26,12 +26,15 @@ export function HeroSection() {
             </a>
           </div>
         </div>
-        <div className="hero-aside" aria-hidden="true">
-          <span className="orbit orbit-one" />
-          <span className="orbit orbit-two" />
-          <span className="orbit orbit-three" />
-          <span className="orbit-core">JD</span>
-          <span className="orbit-label">DISEÑO · CÓDIGO · IDEAS</span>
+        <div className="hero-aside">
+          <img
+            className="hero-portrait"
+            src="/images/joaquin-portrait.png"
+            alt="Retrato de Joaquín con líneas azules pintadas en el rostro"
+            width="1179"
+            height="1334"
+            fetchPriority="high"
+          />
         </div>
         <div className="hero-index">
           <span>01 / 09</span>

@@ -1,20 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
 @import 'tailwindcss';
 
 :root {
   color-scheme: dark;
-  --color-bg: #0b0d12;
-  --color-surface: #11141b;
-  --color-surface-raised: #161a23;
-  --color-text: #f1f1ed;
-  --color-muted: #969ba8;
-  --color-line: #252a34;
-  --color-accent: #c8f169;
-  --color-accent-strong: #a9d846;
-  --font-body: 'DM Sans', sans-serif;
-  --font-display: 'Manrope', sans-serif;
-  --font-mono: 'DM Mono', monospace;
-  --space-section: clamp(5rem, 10vw, 9rem);
+  --color-bg: #071a24;
+  --color-surface: #0b2430;
+  --color-surface-raised: #10303e;
+  --color-text: #f3f8fb;
+  --color-muted: #a5bbc5;
+  --color-line: #1b3d4b;
+  --color-accent: #00a6dc;
+  --color-accent-strong: #13b9ed;
+  --font-body: 'Poppins', sans-serif;
+  --font-display: 'Poppins', sans-serif;
+  --font-mono: 'Poppins', sans-serif;
+  --space-section: clamp(4rem, 7vw, 6rem);
   --radius-card: 14px;
   --shadow-card: 0 24px 64px rgb(0 0 0 / 18%);
   --transition-ui: 180ms ease;

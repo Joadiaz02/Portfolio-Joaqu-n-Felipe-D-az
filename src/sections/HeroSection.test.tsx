@@ -10,5 +10,10 @@ describe('HeroSection', () => {
       'href',
       '#projects',
     )
+    expect(screen.getByRole('img', { name: /retrato de joaquín/i })).toHaveAttribute(
+      'src',
+      '/images/joaquin-portrait.png',
+    )
+    expect(document.querySelector('.orbit-core')).not.toBeInTheDocument()
   })
 })

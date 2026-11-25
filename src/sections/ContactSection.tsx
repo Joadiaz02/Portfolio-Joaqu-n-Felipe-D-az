@@ -10,8 +10,16 @@ export function ContactSection() {
       <Container>
         <SectionHeading
           eyebrow="07 — CONTACTO"
-          title="¿Hacemos algo bueno?"
-          description="Estoy abierto a propuestas para clientes particulares, restaurantes de servicio rápido, sistemas de gestión para negocios y emprendimientos. Podés compartir una idea, contarme qué necesitás, coordinar una reunión o solicitar un presupuesto."
+          title="¿Tenes alguna idea en mente?"
+          description="Estoy abierto a 
+          nuevas oportunidades laborales, 
+          proyectos freelance y colaboraciones 
+          grupales.
+
+Si también necesitás un sitio web, aplicación o soporte técnico para una plataforma ya existente de tu negocio,
+podés contactarme en cualquiera de los canales disponibles debajo. Estoy disponible para
+ coordinar una reunión, conversar sobre tus 
+ necesidades y evaluar un presupuesto."
         />
         <SocialLinks links={socialLinks} variant="cards" />
         <div className="contact-bottom">

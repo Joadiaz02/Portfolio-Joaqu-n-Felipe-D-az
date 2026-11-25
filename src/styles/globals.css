@@ -5,7 +5,7 @@
 }
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 84px;
+  scroll-padding-top: 72px;
 }
 body {
   margin: 0;
@@ -41,7 +41,7 @@ button {
 }
 .section {
   padding-block: var(--space-section);
-  scroll-margin-top: 70px;
+  scroll-margin-top: 0;
 }
 .section-alt {
   background:
@@ -65,7 +65,7 @@ button {
   transform: translateY(-160%);
   padding: 10px 15px;
   background: var(--color-accent);
-  color: #10120d;
+  color: var(--color-bg);
   border-radius: 6px;
 }
 .skip-link:focus {
@@ -77,7 +77,7 @@ button {
   top: 0;
   height: 72px;
   border-bottom: 1px solid rgb(255 255 255 / 5%);
-  background: rgb(11 13 18 / 88%);
+  background: rgb(7 26 36 / 90%);
   backdrop-filter: blur(16px);
 }
 .header-inner {
@@ -102,7 +102,7 @@ button {
 .nav-links a,
 .footer-nav a {
   color: var(--color-muted);
-  font-size: 12px;
+  font-size: 13px;
   transition: color var(--transition-ui);
 }
 .nav-links a:hover,
@@ -118,22 +118,23 @@ button {
 }
 .hero {
   position: relative;
-  min-height: min(790px, calc(100svh - 72px));
+  min-height: calc(100svh - 72px);
   display: flex;
   align-items: center;
   overflow: hidden;
+  padding-block: 0;
 }
 .hero .container {
   position: relative;
   display: flex;
-  min-height: 580px;
+  min-height: calc(100svh - 72px);
   align-items: center;
 }
 .hero-content {
   position: relative;
   z-index: 1;
-  width: 62%;
-  padding-block: 55px 100px;
+  width: 56%;
+  padding-block: 36px 64px;
 }
 .status-dot,
 .timeline-dot {
@@ -142,7 +143,7 @@ button {
   height: 7px;
   border-radius: 50%;
   background: var(--color-accent);
-  box-shadow: 0 0 15px rgb(200 241 105 / 70%);
+  box-shadow: 0 0 15px rgb(0 166 220 / 70%);
   vertical-align: 1px;
   margin-right: 8px;
 }
@@ -154,18 +155,22 @@ p {
 }
 .hero h1 {
   margin: 22px 0 4px;
-  font: 700 clamp(3.4rem, 8vw, 7.7rem)/0.99 var(--font-display);
-  letter-spacing: -0.085em;
+  font: 700 clamp(3.2rem, 6vw, 5.7rem)/1.08 var(--font-display);
+  letter-spacing: -0.06em;
 }
 .hero h1 span {
   color: var(--color-accent);
 }
 .hero-role {
-  margin: 20px 0 4px;
-  font-size: 21px;
+  margin: 20px 0 8px;
+  color: var(--color-accent);
+  font-size: 24px;
+  font-weight: 700;
 }
 .hero-summary {
+  max-width: 590px;
   color: var(--color-muted);
+  font-size: 16px;
 }
 .hero-actions {
   display: flex;
@@ -183,7 +188,7 @@ p {
   border: 1px solid var(--color-accent);
   border-radius: 5px;
   background: var(--color-accent);
-  color: #14170e;
+  color: #06202a;
   font-size: 13px;
   font-weight: 700;
   transition:
@@ -201,7 +206,7 @@ p {
 }
 .button-secondary:hover {
   border-color: var(--color-accent);
-  background: rgb(200 241 105 / 8%);
+  background: rgb(0 166 220 / 8%);
 }
 .text-link {
   display: inline-flex;
@@ -216,15 +221,31 @@ p {
 .hero-aside {
   position: absolute;
   top: 50%;
-  right: 0;
-  width: min(38vw, 410px);
-  aspect-ratio: 1;
-  transform: translateY(-52%);
+  right: -4%;
+  width: min(55vw, 700px);
+  height: 94%;
+  transform: translateY(-50%);
+  -webkit-mask-image:
+    linear-gradient(90deg, transparent 0%, #000 12%, #000 90%, transparent 100%),
+    linear-gradient(0deg, transparent 0%, #000 30%, #000 68%, transparent 100%);
+  -webkit-mask-composite: source-in;
+  mask-image:
+    linear-gradient(90deg, transparent 0%, #000 12%, #000 90%, transparent 100%),
+    linear-gradient(0deg, transparent 0%, #000 30%, #000 68%, transparent 100%);
+  mask-composite: intersect;
+}
+.hero-portrait {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  filter: brightness(0.42) saturate(0.44) contrast(0.92) blur(0.75px);
 }
 .orbit {
   position: absolute;
   inset: 0;
-  border: 1px solid rgb(200 241 105 / 20%);
+  border: 1px solid rgb(0 166 220 / 20%);
   border-radius: 50%;
 }
 .orbit-one {
@@ -237,7 +258,7 @@ p {
 .orbit-three {
   transform: scale(0.47) rotate(-30deg);
   border-style: dashed;
-  border-color: rgb(200 241 105 / 23%);
+  border-color: rgb(0 166 220 / 23%);
 }
 .orbit-core {
   position: absolute;
@@ -245,11 +266,11 @@ p {
   display: grid;
   place-items: center;
   border-radius: 50%;
-  background: radial-gradient(circle at 35% 30%, #303c22, #151b13 70%);
+  background: radial-gradient(circle at 35% 30%, #12333f, #0b2430 70%);
   color: var(--color-accent);
   font: 700 42px var(--font-display);
   letter-spacing: -0.08em;
-  box-shadow: 0 0 90px rgb(200 241 105 / 10%);
+  box-shadow: 0 0 90px rgb(0 166 220 / 10%);
 }
 .orbit-label {
   position: absolute;
@@ -262,7 +283,7 @@ p {
 .hero-index {
   position: absolute;
   right: 0;
-  bottom: 34px;
+  bottom: 18px;
   left: 0;
   display: flex;
   justify-content: space-between;
@@ -336,7 +357,7 @@ p {
 .skill-card:hover,
 .certificate-card:hover {
   transform: translateY(-3px);
-  border-color: rgb(200 241 105 / 45%);
+  border-color: rgb(0 166 220 / 45%);
 }
 .project-top {
   display: flex;
@@ -557,7 +578,7 @@ p {
   padding: clamp(25px, 5vw, 55px);
   border: 1px solid var(--color-line);
   border-radius: var(--radius-card);
-  background: linear-gradient(115deg, #171d12, #11141b 58%);
+  background: linear-gradient(115deg, #10303e, #0b2430 58%);
 }
 .resume-icon {
   display: grid;
@@ -565,7 +586,7 @@ p {
   height: 56px;
   flex: 0 0 auto;
   place-items: center;
-  border: 1px solid rgb(200 241 105 / 35%);
+  border: 1px solid rgb(0 166 220 / 35%);
   border-radius: 12px;
   color: var(--color-accent);
 }
@@ -639,7 +660,7 @@ p {
 .site-footer {
   padding-block: 44px 20px;
   border-top: 1px solid var(--color-line);
-  background: #090a0e;
+  background: #06151e;
 }
 .footer-main {
   display: flex;
@@ -678,12 +699,13 @@ p {
     font-size: 10px;
   }
   .hero-content {
-    width: 68%;
+    width: 56%;
   }
   .hero-aside {
-    right: -8%;
-    width: 38vw;
-    opacity: 0.75;
+    right: -4%;
+    width: 55vw;
+    height: 92%;
+    opacity: 0.86;
   }
   .projects-grid,
   .certificate-grid {
@@ -699,7 +721,7 @@ p {
 }
 @media (max-width: 680px) {
   html {
-    scroll-padding-top: 68px;
+    scroll-padding-top: 64px;
   }
   .container {
     width: min(100% - 36px, 540px);
@@ -721,7 +743,7 @@ p {
     display: none;
     padding: 12px 18px 18px;
     border-bottom: 1px solid var(--color-line);
-    background: #0b0d12;
+    background: var(--color-bg);
   }
   .nav-links.is-open {
     display: grid;
@@ -732,26 +754,31 @@ p {
     font-size: 13px;
   }
   .hero {
-    min-height: 690px;
+    min-height: calc(100svh - 64px);
   }
   .hero .container {
-    min-height: 620px;
-    align-items: flex-start;
+    min-height: calc(100svh - 64px);
+    align-items: center;
   }
   .hero-content {
     width: 100%;
-    padding-top: 100px;
+    padding-block: 30px 92px;
   }
   .hero h1 {
-    font-size: clamp(3.4rem, 16vw, 5.6rem);
+    font-size: clamp(2.4rem, 11vw, 4rem);
   }
   .hero-aside {
     top: auto;
-    right: -20%;
-    bottom: 55px;
-    width: 62vw;
-    opacity: 0.36;
+    right: -8%;
+    bottom: 217px;
+    width: 70vw;
+    height: 50%;
+    opacity: 0.42;
     transform: none;
+  }
+  .hero-portrait {
+    object-position: 58% center;
+    filter: brightness(0.62) saturate(0.5) contrast(0.95) blur(0.75px);
   }
   .orbit-label {
     display: none;
@@ -881,14 +908,6 @@ p {
 .skill-card > p {
   min-height: 0;
   font-size: 15px;
-}
-.language-card {
-  margin-top: 28px;
-  padding: 20px 0;
-  border-top: 1px solid var(--color-line);
-}
-.language-card p {
-  margin: 10px 0 0;
 }
 .certificate-grid {
   grid-template-columns: repeat(2, minmax(0, 1fr));

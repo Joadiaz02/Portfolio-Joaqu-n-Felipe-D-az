@@ -20,21 +20,22 @@ export function SkillsSection() {
                 <p>{skill.description}</p>
               </article>
             ))}
+            {languages.map((language) => (
+              <article className="skill-card language-card" key={language.id}>
+                <span className="skill-index">IDIOMA</span>
+                <h3>{language.name}</h3>
+                <p>
+                  Nivel {language.level}
+                  {language.certificationReference && ` · ${language.certificationReference}`}
+                </p>
+              </article>
+            ))}
           </div>
         ) : (
           <p className="empty-note">
             Las habilidades se agregarán cuando estén definidas con ejemplos concretos.
           </p>
         )}
-        <div className="language-card">
-          <span className="eyebrow">IDIOMAS</span>
-          {languages.map((language) => (
-            <p key={language.id}>
-              <strong>{language.name}:</strong> {language.level}
-              {language.certificationReference ? ` · ${language.certificationReference}` : ''}
-            </p>
-          ))}
-        </div>
       </Container>
     </section>
   )

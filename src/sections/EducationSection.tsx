@@ -2,15 +2,22 @@ import { Container } from '../components/layout/Container'
 import { SectionHeading } from '../components/layout/SectionHeading'
 import { education } from '../data/education'
 
+function formatEducationDate(value: string) {
+  const [year, month] = value.split('-').map(Number)
+  if (!month) return value
+
+  return new Intl.DateTimeFormat('es-AR', {
+    month: 'long',
+    year: 'numeric',
+    timeZone: 'UTC',
+  }).format(new Date(Date.UTC(year, month - 1, 1)))
+}
+
 export function EducationSection({ items = education }: { items?: typeof education } = {}) {
   return (
     <section id="education" className="section">
       <Container>
-        <SectionHeading
-          eyebrow="05 — FORMACIÓN"
-          title="Aprender siempre"
-          description="Formación académica y aprendizaje continuo."
-        />
+        <SectionHeading eyebrow="05 — FORMACIÓN" title="Formación acádemica" description="" />
         {items.length ? (
           <div className="timeline">
             {items.map((item) => (
@@ -25,8 +32,8 @@ export function EducationSection({ items = education }: { items?: typeof educati
                       : item.status === 'completed'
                         ? 'Completado'
                         : item.status}
-                    {item.startDate && ` · ${item.startDate}`}
-                    {item.endDate && ` — ${item.endDate}`}
+                    {item.startDate && ` · ${formatEducationDate(item.startDate)}`}
+                    {item.endDate && ` — ${formatEducationDate(item.endDate)}`}
                   </p>
                   {item.description && <p>{item.description}</p>}
                 </div>

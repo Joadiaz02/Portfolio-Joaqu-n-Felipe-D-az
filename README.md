@@ -28,6 +28,7 @@ Las afirmaciones sobre experiencia y estudios deben respaldarse con el CV, docum
 - CV: `public/documents/cv.pdf` → `/documents/cv.pdf`.
 - APK de GLUTN: `public/documents/glutn.apk` → `/documents/glutn.apk`.
 - Icono WhatsApp: `public/icons/whatsapp.svg` → `/icons/whatsapp.svg`.
+- Retrato del hero: `public/images/joaquin-portrait.png` → `/images/joaquin-portrait.png`.
 
 Las tarjetas de proyectos describen brevemente la utilidad, las funciones y el stack de cada app; se mantienen sin capturas ni imágenes.
 
